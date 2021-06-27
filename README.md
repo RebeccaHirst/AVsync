@@ -4,11 +4,11 @@ Sync Mic recorded audio with video
 Automatically sync mic recorded audio with a video files. Useful for when you need to replace low quality audio of a video recording with a higher quality simultaneously recorded audio. This project generally follows [this guide](http://www.dsg-bielefeld.de/dsg_wp/wp-content/uploads/2014/10/video_syncing_fun.pdf). 
 
 
-Step-by-step guide
+## Step-by-step guide
 -------------------
 
 Getting set up
----------------
+--------------
 1. Install [ffmpeg](https://ffmpeg.org/download.html), I found [this guide useful for windows](https://www.wikihow.com/Install-FFmpeg-on-Windows) although note that with the 2021 release of Praat you use slightly different code to execute Praat from the command line in windows (no need for praatcon.exe). 
 2. Install [Praat](https://www.fon.hum.uva.nl/praat/download_win.html) once you have downloaded and extracted the Praat.exe file add it to your Program Files directory.
 
@@ -29,15 +29,15 @@ The next step is to extract the audio-onset times for our video audio and mic re
 
 2. Select to open a script within praat and open `getOnsetBatch.praat`
 
-<img src="/screenshots/praat-openscript.png" width="80%"/>
+<img src="/screenshots/praat-openscript.png" width="50%"/>
 
 3. Select *Run > Run*
 
-<img src="/screenshots/Praatrun.png" width="80%"/>
+<img src="/screenshots/Praatrun.png" width="50%"/>
 
 4. Add path to files to be processed as well as the desired output.txt name. Select OK. You should now find that output file in your working directory. 
 
-<img src="/screenshots/Praat_info_gui.png" width="80%"/>
+<img src="/screenshots/Praat_info_gui.png" width="50%"/>
 
 This will have written a list of dictionaries that we can read in python. You will want to run this script twice, once fir video audio and once for mic recorded audio - producing 2 .txt files (i.e. "video_onsets.txt" and "mic_onsets.txt")
 

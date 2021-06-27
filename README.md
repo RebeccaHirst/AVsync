@@ -63,5 +63,14 @@ for i, video in enumerate(video_files):
 ```
 The corresponding final files are stored to `videos\\audio_replaced`
 
+Recording materials
+-----------------------
+
+*	clap.wav - a wav file to generate the same clap on each recording
+*   recording_guide.psyexp - a psychopy experiment file to guide the timing of recordings. 
+*   Sentence_keyword_check.xlsx - a list of sentences to be spoken
+
+Note that these files are intended only to guide timing, video and audio were (by us) recorded independantly of psychopy. Audio was recorded via audacity and video was recorded using a phone. 
+
 References:
 ---------------

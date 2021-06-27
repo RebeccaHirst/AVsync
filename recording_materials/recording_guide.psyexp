@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2021.1.4">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="False" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="list"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1280, 800]" valType="list"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="color"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="recording_guide" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <CodeComponent name="countdown_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="thisNum = 0" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if t &gt;= 0:&amp;#10;    thisNum = int(round(t, 3))&amp;#10;else:&amp;#10;    thisNum = 3" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="countdown_code" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="countdown">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="countdown" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every frame" val="$3 - thisNum" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <SoundComponent name="clap">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val=".2" valType="num"/>
+        <Param name="hamming" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="clap" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sound" updates="constant" val="clap.wav" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="3" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+        <Param name="volume" updates="constant" val="1" valType="num"/>
+      </SoundComponent>
+      <TextComponent name="speak">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="speak" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="4" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="speak" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp">
+        <Param name="allowedKeys" updates="constant" val="'down'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="4" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="sentTxt">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="num"/>
+        <Param name="name" updates="None" val="sentTxt" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, .3)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$sentence" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <TextComponent name="key_reminder">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
+        <Param name="name" updates="None" val="key_reminder" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, -.4)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="4" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="press the down arrow key to submit" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="instructions">
+      <TextComponent name="instruct">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
+        <Param name="name" updates="None" val="instruct" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="This is a basic experiment to assist with the recording of audio and video files to generate speech stimuli. &amp;#10;&amp;#10;At the start of each trial you will see the sentence you are about to read. &amp;#10;&amp;#10;You will then see a countdown, followed by a clap cound, followed by a cue to speak. After you have spoken please press the space bar to move on.&amp;#10;&amp;#10;Note that we will not use psychopys mic component for audio recording, recording will take place in a seperate window using audacity.&amp;#10;&amp;#10;press space to start" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="start_key">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="start_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="interimMsg">
+      <TextComponent name="interim">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="num"/>
+        <Param name="name" updates="None" val="interim" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Stop the video and audio recording, save the files, press space when you are ready to continue&amp;#10;&amp;#10;Press the right arrow if you are happy with the recording, press left to retake" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="retake_key">
+        <Param name="allowedKeys" updates="constant" val="'left','right'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="retake_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="retake_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (_pj.in_es6(&quot;right&quot;, retake_key.keys)) {&amp;#10;    retakeLoop.finished = true;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# only move on if the right key was pressed, otherwise repeat&amp;#10;if 'right' in retake_key.keys:&amp;#10;    retakeLoop.finished = True" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="retake_code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="startInstructions">
+      <TextComponent name="audStart">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="audStart" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Start your audio" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <TextComponent name="vidStart">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="vidStart" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="3" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Start your video" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="instructions"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'sentence_number': 1, 'sentence': 'The hot sun warmed the ground', 'keyword1': 'hot', 'keyword2': 'sun', 'keyword3': 'warmed', 'keyword4': 'ground', 'Recorded': None}, {'sentence_number': 2, 'sentence': 'The gray mouse ate the cheese', 'keyword1': 'gray', 'keyword2': 'mouse', 'keyword3': 'ate', 'keyword4': 'cheese', 'Recorded': None}, {'sentence_number': 3, 'sentence': 'The strong father carried my brother', 'keyword1': 'strong', 'keyword2': 'father', 'keyword3': 'carried', 'keyword4': 'brother', 'Recorded': None}, {'sentence_number': 4, 'sentence': 'The large monkey chased the child', 'keyword1': 'large', 'keyword2': 'monkey', 'keyword3': 'chased', 'keyword4': 'child', 'Recorded': None}, {'sentence_number': 5, 'sentence': 'The mean bear ate the fruit', 'keyword1': 'mean', 'keyword2': 'bear', 'keyword3': 'ate', 'keyword4': 'fruit', 'Recorded': None}, {'sentence_number': 6, 'sentence': 'The loud noise upset the baby', 'keyword1': 'loud', 'keyword2': 'noise', 'keyword3': 'upset', 'keyword4': 'baby', 'Recorded': None}, {'sentence_number': 7, 'sentence': 'The friendly neighbor helped the grandmother', 'keyword1': 'friendly', 'keyword2': 'neighbor', 'keyword3': 'helped', 'keyword4': 'grandmother', 'Recorded': None}, {'sentence_number': 8, 'sentence': 'The black bear scared the visitors', 'keyword1': 'black', 'keyword2': 'bear', 'keyword3': 'scared', 'keyword4': 'visitors', 'Recorded': None}, {'sentence_number': 9, 'sentence': 'The hungry children ate the snacks', 'keyword1': 'hungry', 'keyword2': 'children', 'keyword3': 'ate', 'keyword4': 'snacks', 'Recorded': None}, {'sentence_number': 10, 'sentence': 'The strong sister won the game', 'keyword1': 'strong', 'keyword2': 'sister', 'keyword3': 'won', 'keyword4': 'game', 'Recorded': None}, {'sentence_number': 11, 'sentence': 'The rude joke upset my parents', 'keyword1': 'rude', 'keyword2': 'joke', 'keyword3': 'upset', 'keyword4': 'parents', 'Recorded': None}, {'sentence_number': 12, 'sentence': 'The dark house scared the baby', 'keyword1': 'dark', 'keyword2': 'house', 'keyword3': 'scared', 'keyword4': 'baby', 'Recorded': None}, {'sentence_number': 13, 'sentence': 'The talented musician knew the songs', 'keyword1': 'talented', 'keyword2': 'musician', 'keyword3': 'knew', 'keyword4': 'songs', 'Recorded': None}, {'sentence_number': 14, 'sentence': 'The gray horse ate the grass', 'keyword1': 'gray', 'keyword2': 'horse', 'keyword3': 'ate', 'keyword4': 'grass', 'Recorded': None}, {'sentence_number': 15, 'sentence': 'The sick student read the book', 'keyword1': 'sick', 'keyword2': 'student', 'keyword3': 'read', 'keyword4': 'book', 'Recorded': None}, {'sentence_number': 16, 'sentence': 'The hungry girl made the sandwich', 'keyword1': 'hungry', 'keyword2': 'girl', 'keyword3': 'made', 'keyword4': 'sandwich', 'Recorded': None}, {'sentence_number': 17, 'sentence': 'The tiny flies bothered the girl', 'keyword1': 'tiny', 'keyword2': 'flies', 'keyword3': 'bothered', 'keyword4': 'girl', 'Recorded': None}, {'sentence_number': 18, 'sentence': 'The new student liked the professor', 'keyword1': 'new', 'keyword2': 'student', 'keyword3': 'like', 'keyword4': 'professor', 'Recorded': None}, {'sentence_number': 19, 'sentence': 'The hot coffee hurt the boy', 'keyword1': 'hot', 'keyword2': 'coffee', 'keyword3': 'hurt', 'keyword4': 'boy', 'Recorded': None}, {'sentence_number': 20, 'sentence': 'The small animal scared the baby', 'keyword1': 'small', 'keyword2': 'animal', 'keyword3': 'scared', 'keyword4': 'baby', 'Recorded': None}, {'sentence_number': 21, 'sentence': 'The kind girl helped the strangers', 'keyword1': 'kind', 'keyword2': 'girl', 'keyword3': 'helped', 'keyword4': 'strangers', 'Recorded': None}, {'sentence_number': 22, 'sentence': 'the talented author received the prize', 'keyword1': 'talented', 'keyword2': 'author', 'keyword3': 'received', 'keyword4': 'prize', 'Recorded': None}, {'sentence_number': 23, 'sentence': 'The black cat climbed the tree', 'keyword1': 'black', 'keyword2': 'cat', 'keyword3': 'climbed', 'keyword4': 'tree', 'Recorded': None}, {'sentence_number': 24, 'sentence': 'The thoughtful boyfriend bought the flowers', 'keyword1': 'thoughtful', 'keyword2': 'boyfriend', 'keyword3': 'bought ', 'keyword4': 'flowers', 'Recorded': None}, {'sentence_number': 25, 'sentence': 'The hungry dog ate the food', 'keyword1': 'hungry', 'keyword2': 'dog', 'keyword3': 'ate', 'keyword4': 'food', 'Recorded': None}, {'sentence_number': 26, 'sentence': 'The friendly cat loved the boy', 'keyword1': 'friendly', 'keyword2': 'cat', 'keyword3': 'loved', 'keyword4': 'boy', 'Recorded': None}, {'sentence_number': 27, 'sentence': 'The old man cooked the carrots', 'keyword1': 'old', 'keyword2': 'man', 'keyword3': 'cooked', 'keyword4': 'carrots', 'Recorded': None}, {'sentence_number': 28, 'sentence': 'The happy dog found the toy', 'keyword1': 'happy', 'keyword2': 'dog', 'keyword3': 'found', 'keyword4': 'toy', 'Recorded': None}, {'sentence_number': 29, 'sentence': 'The youngest sister watched the parade', 'keyword1': 'youngest', 'keyword2': 'sister', 'keyword3': 'watched', 'keyword4': 'parade', 'Recorded': None}, {'sentence_number': 30, 'sentence': 'The sweet dog watched the children', 'keyword1': 'sweet', 'keyword2': 'dog', 'keyword3': 'watched', 'keyword4': 'children', 'Recorded': None}, {'sentence_number': 31, 'sentence': 'The pretty girl won the prize', 'keyword1': 'pretty', 'keyword2': 'girl', 'keyword3': 'won', 'keyword4': 'prize', 'Recorded': None}, {'sentence_number': 32, 'sentence': 'The lonely artist called her friend', 'keyword1': 'lonely', 'keyword2': 'artist', 'keyword3': 'called', 'keyword4': 'friend', 'Recorded': None}, {'sentence_number': 33, 'sentence': 'The youngest child hated the fruit', 'keyword1': 'youngest', 'keyword2': 'child', 'keyword3': 'hated', 'keyword4': 'fruit', 'Recorded': None}, {'sentence_number': 34, 'sentence': 'The cheap food attracted the customers', 'keyword1': 'cheap', 'keyword2': 'food', 'keyword3': 'attracted', 'keyword4': 'customers', 'Recorded': None}, {'sentence_number': 35, 'sentence': 'The rich boyfriend owned the houses', 'keyword1': 'rich', 'keyword2': 'boyfriend', 'keyword3': 'owned', 'keyword4': 'houses', 'Recorded': None}, {'sentence_number': 36, 'sentence': 'The new kitten climbed the tree', 'keyword1': 'new', 'keyword2': 'kitten', 'keyword3': 'climbed', 'keyword4': 'tree', 'Recorded': None}, {'sentence_number': 37, 'sentence': 'The angry bear scared the couple', 'keyword1': 'angry', 'keyword2': 'bear', 'keyword3': 'scared', 'keyword4': 'couple', 'Recorded': None}, {'sentence_number': 38, 'sentence': 'The thirsty cat drank the milk', 'keyword1': 'thirsty', 'keyword2': 'cat', 'keyword3': 'drank', 'keyword4': 'milk', 'Recorded': None}, {'sentence_number': 39, 'sentence': 'The three sisters shared the clothes', 'keyword1': 'three', 'keyword2': 'sisters', 'keyword3': 'shared', 'keyword4': 'clothes', 'Recorded': None}, {'sentence_number': 40, 'sentence': 'The tiny rabbit chewed the grass', 'keyword1': 'tiny', 'keyword2': 'rabbit', 'keyword3': 'chewed', 'keyword4': 'grass', 'Recorded': None}, {'sentence_number': 41, 'sentence': 'The grocery store sold the food', 'keyword1': 'grocery', 'keyword2': 'store', 'keyword3': 'sold', 'keyword4': 'food', 'Recorded': None}, {'sentence_number': 42, 'sentence': 'The dangerous snake bit the rabbit', 'keyword1': 'dangerous', 'keyword2': 'snake', 'keyword3': 'bit', 'keyword4': 'rabbit', 'Recorded': None}, {'sentence_number': 43, 'sentence': 'The troubled son stole the money', 'keyword1': 'troubled', 'keyword2': 'son', 'keyword3': 'stole', 'keyword4': 'money', 'Recorded': None}, {'sentence_number': 44, 'sentence': 'The hungry animal chewed the plants', 'keyword1': 'hungry', 'keyword2': 'animal', 'keyword3': 'chewed', 'keyword4': 'plants', 'Recorded': None}, {'sentence_number': 45, 'sentence': 'The busy farmer grew the potatoes', 'keyword1': 'busy', 'keyword2': 'farmer', 'keyword3': 'grew', 'keyword4': 'potatoes', 'Recorded': None}, {'sentence_number': 46, 'sentence': 'The strong wind cleaned the air', 'keyword1': 'strong', 'keyword2': 'wind', 'keyword3': 'cleaned', 'keyword4': 'air', 'Recorded': None}, {'sentence_number': 47, 'sentence': 'The gray rabbit loved the carrots', 'keyword1': 'gray', 'keyword2': 'rabbit', 'keyword3': 'loved', 'keyword4': 'carrots', 'Recorded': None}, {'sentence_number': 48, 'sentence': 'The kind neighbor opened the door', 'keyword1': 'kind', 'keyword2': 'neighbor', 'keyword3': 'opened', 'keyword4': 'door', 'Recorded': None}, {'sentence_number': 49, 'sentence': 'The old garbage attracted the flies', 'keyword1': 'old', 'keyword2': 'garbage', 'keyword3': 'attracted', 'keyword4': 'flies', 'Recorded': None}, {'sentence_number': 50, 'sentence': 'The small boy chose the game', 'keyword1': 'small', 'keyword2': 'boy', 'keyword3': 'chose', 'keyword4': 'game', 'Recorded': None}, {'sentence_number': 51, 'sentence': 'The large family expected the visitors', 'keyword1': 'large', 'keyword2': 'family', 'keyword3': 'expected', 'keyword4': 'visitors', 'Recorded': None}, {'sentence_number': 52, 'sentence': 'The small family played the game', 'keyword1': 'small', 'keyword2': 'family', 'keyword3': 'played', 'keyword4': 'game', 'Recorded': None}, {'sentence_number': 53, 'sentence': 'The three sisters watched the movie', 'keyword1': 'three', 'keyword2': 'sisters', 'keyword3': 'watched', 'keyword4': 'movie', 'Recorded': None}, {'sentence_number': 54, 'sentence': 'The tiny kitten chased the mouse', 'keyword1': 'tiny', 'keyword2': 'kitten', 'keyword3': 'chased', 'keyword4': 'mouse', 'Recorded': None}, {'sentence_number': 55, 'sentence': 'The angry husband visited the lawyer', 'keyword1': 'angry', 'keyword2': 'husband', 'keyword3': 'visited', 'keyword4': 'lawyer', 'Recorded': None}, {'sentence_number': 56, 'sentence': 'The troubled child needed her mother', 'keyword1': 'troubled', 'keyword2': 'child', 'keyword3': 'needed', 'keyword4': 'mother', 'Recorded': None}, {'sentence_number': 57, 'sentence': 'The pretty woman liked the cookies', 'keyword1': 'pretty', 'keyword2': 'woman', 'keyword3': 'liked', 'keyword4': 'cookies', 'Recorded': None}, {'sentence_number': 58, 'sentence': 'The stormy weather destroyed the home', 'keyword1': 'stormy', 'keyword2': 'weather', 'keyword3': 'destroyed', 'keyword4': 'home', 'Recorded': None}, {'sentence_number': 59, 'sentence': 'The interesting book saved the author', 'keyword1': 'interesting', 'keyword2': 'book', 'keyword3': 'saved', 'keyword4': 'author', 'Recorded': None}, {'sentence_number': 60, 'sentence': 'The sick patient received the flowers', 'keyword1': 'sick', 'keyword2': 'patient', 'keyword3': 'received', 'keyword4': 'flowers', 'Recorded': None}, {'sentence_number': 61, 'sentence': 'The small restaurant needed the money', 'keyword1': 'small', 'keyword2': 'restaurant', 'keyword3': 'needed', 'keyword4': 'money', 'Recorded': None}, {'sentence_number': 62, 'sentence': 'The talented artist made a picture', 'keyword1': 'talented', 'keyword2': 'artist', 'keyword3': 'made', 'keyword4': 'picture', 'Recorded': None}, {'sentence_number': 63, 'sentence': 'The English student read the book', 'keyword1': 'English', 'keyword2': 'student', 'keyword3': 'read', 'keyword4': 'book', 'Recorded': None}, {'sentence_number': 64, 'sentence': 'The hot sun warmed the tea', 'keyword1': 'hot', 'keyword2': 'sun', 'keyword3': 'warmed', 'keyword4': 'tea', 'Recorded': None}, {'sentence_number': 65, 'sentence': 'The hardworking nurse helped the patient', 'keyword1': 'hardworking', 'keyword2': 'nurse', 'keyword3': 'helped', 'keyword4': 'patient', 'Recorded': None}, {'sentence_number': 66, 'sentence': 'The busy daughter joined the museum', 'keyword1': 'busy', 'keyword2': 'daughter', 'keyword3': 'joined', 'keyword4': 'museum', 'Recorded': None}, {'sentence_number': 67, 'sentence': 'The kind woman helped her neighbor', 'keyword1': 'kind', 'keyword2': 'woman', 'keyword3': 'helped', 'keyword4': 'neighbor', 'Recorded': None}, {'sentence_number': 68, 'sentence': 'The talented doctor saved the child', 'keyword1': 'talented', 'keyword2': 'doctor', 'keyword3': 'saved', 'keyword4': 'child', 'Recorded': None}, {'sentence_number': 69, 'sentence': 'The football player won the prize', 'keyword1': 'football', 'keyword2': 'player', 'keyword3': 'won', 'keyword4': 'prize', 'Recorded': None}, {'sentence_number': 70, 'sentence': 'The friendly waiters served the meal', 'keyword1': 'friendly', 'keyword2': 'waiters', 'keyword3': 'served', 'keyword4': 'meal', 'Recorded': None}, {'sentence_number': 71, 'sentence': 'The hardworking farmer grew the corn', 'keyword1': 'hardworking', 'keyword2': 'farmer', 'keyword3': 'grew', 'keyword4': 'corn', 'Recorded': None}, {'sentence_number': 72, 'sentence': 'The friendly girl shared the ball', 'keyword1': 'friendly', 'keyword2': 'girl', 'keyword3': 'shared', 'keyword4': 'ball', 'Recorded': None}, {'sentence_number': 73, 'sentence': 'The hungry rabbit ate the carrots', 'keyword1': 'hungry', 'keyword2': 'rabbit', 'keyword3': 'ate', 'keyword4': 'carrots', 'Recorded': None}, {'sentence_number': 74, 'sentence': 'The friendly baby hugged the kitten', 'keyword1': 'friendly', 'keyword2': 'baby', 'keyword3': 'hugged', 'keyword4': 'kitten', 'Recorded': None}, {'sentence_number': 75, 'sentence': 'The helpful daughter cleaned the house', 'keyword1': 'helpful', 'keyword2': 'daughter', 'keyword3': 'cleaned', 'keyword4': 'houses', 'Recorded': None}, {'sentence_number': 76, 'sentence': 'The thirsty dog drank the water', 'keyword1': 'thirsty', 'keyword2': 'dog', 'keyword3': 'drank', 'keyword4': 'water', 'Recorded': None}, {'sentence_number': 77, 'sentence': 'The rich man bought the wine', 'keyword1': 'rich', 'keyword2': 'man', 'keyword3': 'bought ', 'keyword4': 'wine', 'Recorded': None}, {'sentence_number': 78, 'sentence': 'The soft music pleased the boss', 'keyword1': 'soft', 'keyword2': 'music', 'keyword3': 'pleased', 'keyword4': 'boss', 'Recorded': None}, {'sentence_number': 79, 'sentence': 'The horrible story upset my grandmother', 'keyword1': 'horrible', 'keyword2': 'story', 'keyword3': 'upset', 'keyword4': 'grandmother', 'Recorded': None}, {'sentence_number': 80, 'sentence': 'The mean children broke the rules', 'keyword1': 'mean', 'keyword2': 'children', 'keyword3': 'broke', 'keyword4': 'rules', 'Recorded': None}, {'sentence_number': 81, 'sentence': 'The teacher chose the horrible book', 'keyword1': 'teacher', 'keyword2': 'chose', 'keyword3': 'horrible', 'keyword4': 'book', 'Recorded': None}, {'sentence_number': 82, 'sentence': 'The children enjoyed the holiday parade', 'keyword1': 'children', 'keyword2': 'enjoyed', 'keyword3': 'holiday', 'keyword4': 'parade', 'Recorded': None}, {'sentence_number': 83, 'sentence': 'The girl loved the sweet coffee', 'keyword1': 'girl', 'keyword2': 'loved', 'keyword3': 'sweet', 'keyword4': 'coffee', 'Recorded': None}, {'sentence_number': 84, 'sentence': 'The grandmother baked a sweet cake', 'keyword1': 'grandmother', 'keyword2': 'baked', 'keyword3': 'sweet', 'keyword4': 'cake', 'Recorded': None}, {'sentence_number': 85, 'sentence': 'The woman met the rich actor', 'keyword1': 'woman', 'keyword2': 'met', 'keyword3': 'rich', 'keyword4': 'actor', 'Recorded': None}, {'sentence_number': 86, 'sentence': 'The doctor owned the yellow car', 'keyword1': 'doctor', 'keyword2': 'owned', 'keyword3': 'yellow', 'keyword4': 'car', 'Recorded': None}, {'sentence_number': 87, 'sentence': 'The teacher wrote a difficult question', 'keyword1': 'teacher', 'keyword2': 'wrote', 'keyword3': 'difficult', 'keyword4': 'question', 'Recorded': None}, {'sentence_number': 88, 'sentence': 'The store sold the dirty clothes', 'keyword1': 'store', 'keyword2': 'sold', 'keyword3': 'dirty', 'keyword4': 'clothes', 'Recorded': None}, {'sentence_number': 89, 'sentence': 'The ball broke the glass window', 'keyword1': 'ball', 'keyword2': 'broke', 'keyword3': 'glass', 'keyword4': 'window', 'Recorded': None}, {'sentence_number': 90, 'sentence': 'The grandfather loved the red wine', 'keyword1': 'grandfather', 'keyword2': 'loved', 'keyword3': 'red', 'keyword4': 'wine', 'Recorded': None}, {'sentence_number': 91, 'sentence': 'The brother met the talented artist', 'keyword1': 'brother', 'keyword2': 'met', 'keyword3': 'talented', 'keyword4': 'artist', 'Recorded': None}, {'sentence_number': 92, 'sentence': 'The chef baked the sweet corn', 'keyword1': 'chef', 'keyword2': 'baked', 'keyword3': 'sweet', 'keyword4': 'corn', 'Recorded': None}, {'sentence_number': 93, 'sentence': 'The father hugged his sad daughter', 'keyword1': 'father', 'keyword2': 'hugged', 'keyword3': 'sad', 'keyword4': 'daughter', 'Recorded': None}, {'sentence_number': 94, 'sentence': 'The chef cooked the delicious food', 'keyword1': 'chef', 'keyword2': 'cooked', 'keyword3': 'delicious', 'keyword4': 'food', 'Recorded': None}, {'sentence_number': 95, 'sentence': 'The bird found the juicy worm', 'keyword1': 'bird', 'keyword2': 'found', 'keyword3': 'juicy', 'keyword4': 'worm', 'Recorded': None}, {'sentence_number': 96, 'sentence': 'The grandfather drank the dark coffee', 'keyword1': 'grandfather', 'keyword2': 'drank', 'keyword3': 'dark', 'keyword4': 'coffee', 'Recorded': None}, {'sentence_number': 97, 'sentence': 'The neighbor liked the loud song', 'keyword1': 'neighbor', 'keyword2': 'liked', 'keyword3': 'loud', 'keyword4': 'song', 'Recorded': None}, {'sentence_number': 98, 'sentence': 'The cat chased the gray mouse', 'keyword1': 'cat', 'keyword2': 'chased', 'keyword3': 'gray', 'keyword4': 'mouse', 'Recorded': None}, {'sentence_number': 99, 'sentence': 'The mother baked the delicious cookies', 'keyword1': 'mother', 'keyword2': 'baked', 'keyword3': 'delicious', 'keyword4': 'cookies', 'Recorded': None}, {'sentence_number': 100, 'sentence': 'The team played a difficult game', 'keyword1': 'team', 'keyword2': 'played', 'keyword3': 'difficult', 'keyword4': 'game', 'Recorded': None}, {'sentence_number': 101, 'sentence': 'The wind destroyed the tiny house', 'keyword1': 'wind', 'keyword2': 'destroyed', 'keyword3': 'tiny', 'keyword4': 'house', 'Recorded': None}, {'sentence_number': 102, 'sentence': 'The restaurant sold the red wine', 'keyword1': 'restaurant', 'keyword2': 'sold', 'keyword3': 'red', 'keyword4': 'wine', 'Recorded': None}, {'sentence_number': 103, 'sentence': 'The musician played a beautiful song', 'keyword1': 'musician', 'keyword2': 'played', 'keyword3': 'beautiful', 'keyword4': 'song', 'Recorded': None}, {'sentence_number': 104, 'sentence': 'The boy carried the heavy chair', 'keyword1': 'boy', 'keyword2': 'carried', 'keyword3': 'heavy', 'keyword4': 'chair', 'Recorded': None}, {'sentence_number': 105, 'sentence': 'The chef chose the delicious cheese', 'keyword1': 'chef', 'keyword2': 'chose', 'keyword3': 'delicious', 'keyword4': 'cheese', 'Recorded': None}, {'sentence_number': 106, 'sentence': 'The man ate the large meal', 'keyword1': 'man', 'keyword2': 'ate', 'keyword3': 'large', 'keyword4': 'meal', 'Recorded': None}, {'sentence_number': 107, 'sentence': 'The parents told the horrible story', 'keyword1': 'parents', 'keyword2': 'told', 'keyword3': 'horrible', 'keyword4': 'story', 'Recorded': None}, {'sentence_number': 109, 'sentence': 'The chef made the fresh noodles', 'keyword1': 'chef', 'keyword2': 'made', 'keyword3': 'fresh', 'keyword4': 'noodles', 'Recorded': None}, {'sentence_number': 110, 'sentence': 'The teacher read an interesting novel', 'keyword1': 'teacher', 'keyword2': 'read', 'keyword3': 'interesting', 'keyword4': 'novel', 'Recorded': None}, {'sentence_number': 111, 'sentence': 'The restaurant served a delicious soup', 'keyword1': 'restaurant', 'keyword2': 'served', 'keyword3': 'delicious', 'keyword4': 'soup', 'Recorded': None}, {'sentence_number': 112, 'sentence': 'The woman heard a beautiful song', 'keyword1': 'woman', 'keyword2': 'heard', 'keyword3': 'beautiful', 'keyword4': 'song', 'Recorded': None}, {'sentence_number': 113, 'sentence': 'The grandmother loved the rich cake', 'keyword1': 'grandmother', 'keyword2': 'loved', 'keyword3': 'rich', 'keyword4': 'cake', 'Recorded': None}, {'sentence_number': 114, 'sentence': 'The nurse cleaned the dirty clothes', 'keyword1': 'nurse', 'keyword2': 'cleaned', 'keyword3': 'dirty', 'keyword4': 'clothes', 'Recorded': None}, {'sentence_number': 115, 'sentence': 'The family watched the talented performer', 'keyword1': 'family', 'keyword2': 'watched', 'keyword3': 'talented', 'keyword4': 'performer', 'Recorded': None}, {'sentence_number': 116, 'sentence': 'The author told an interesting story', 'keyword1': 'author', 'keyword2': 'told', 'keyword3': 'interesting', 'keyword4': 'story', 'Recorded': None}, {'sentence_number': 117, 'sentence': 'The painter owned the soft brushes', 'keyword1': 'painter', 'keyword2': 'owned', 'keyword3': 'soft', 'keyword4': 'brushes', 'Recorded': None}, {'sentence_number': 118, 'sentence': 'The store sold the delicious food', 'keyword1': 'store', 'keyword2': 'sold', 'keyword3': 'delicious', 'keyword4': 'food', 'Recorded': None}, {'sentence_number': 119, 'sentence': 'The travelers visited the new museum', 'keyword1': 'travelers', 'keyword2': 'visited', 'keyword3': 'new', 'keyword4': 'museum', 'Recorded': None}, {'sentence_number': 120, 'sentence': 'The bird bothered the old dog', 'keyword1': 'bird', 'keyword2': 'bothered', 'keyword3': 'old', 'keyword4': 'dog', 'Recorded': None}, {'sentence_number': 121, 'sentence': 'The customers hated the black tea', 'keyword1': 'customers', 'keyword2': 'hated', 'keyword3': 'black', 'keyword4': 'tea', 'Recorded': None}, {'sentence_number': 122, 'sentence': 'The mother drank the orange juice', 'keyword1': 'mother', 'keyword2': 'drank', 'keyword3': 'orange', 'keyword4': 'juice', 'Recorded': None}, {'sentence_number': 123, 'sentence': 'The professor gave the unfair grade', 'keyword1': 'professor', 'keyword2': 'gave', 'keyword3': 'unfair', 'keyword4': 'grade', 'Recorded': None}, {'sentence_number': 124, 'sentence': 'The doctor helped the sick patient', 'keyword1': 'doctor', 'keyword2': 'helped', 'keyword3': 'sick', 'keyword4': 'patient', 'Recorded': None}, {'sentence_number': 125, 'sentence': 'The girl wanted the pretty flowers', 'keyword1': 'girl', 'keyword2': 'wanted', 'keyword3': 'pretty', 'keyword4': 'flowers', 'Recorded': None}, {'sentence_number': 126, 'sentence': 'The goat ate the sweet grass', 'keyword1': 'goat', 'keyword2': 'ate', 'keyword3': 'sweet', 'keyword4': 'grass', 'Recorded': None}, {'sentence_number': 127, 'sentence': 'The grandfather chose an old movie', 'keyword1': 'grandfather', 'keyword2': 'chose', 'keyword3': 'old', 'keyword4': 'movie', 'Recorded': None}, {'sentence_number': 128, 'sentence': 'The children liked the fresh vegetables', 'keyword1': 'children', 'keyword2': 'liked', 'keyword3': 'fresh', 'keyword4': 'vegetables', 'Recorded': None}, {'sentence_number': 129, 'sentence': 'The boss met the new customers', 'keyword1': 'boss', 'keyword2': 'met', 'keyword3': 'new', 'keyword4': 'customers', 'Recorded': None}, {'sentence_number': 130, 'sentence': 'The store sold the cheap picture', 'keyword1': 'store', 'keyword2': 'sold', 'keyword3': 'cheap', 'keyword4': 'picture', 'Recorded': None}, {'sentence_number': 131, 'sentence': 'The monkey made the horrible noise', 'keyword1': 'monkey', 'keyword2': 'made', 'keyword3': 'horrible', 'keyword4': 'noise', 'Recorded': None}, {'sentence_number': 132, 'sentence': 'The artist visited the old museum', 'keyword1': 'artist', 'keyword2': 'visited', 'keyword3': 'old', 'keyword4': 'museum', 'Recorded': None}, {'sentence_number': 133, 'sentence': 'The dog chased the three rabbits', 'keyword1': 'dog', 'keyword2': 'chased', 'keyword3': 'three', 'keyword4': 'rabbits', 'Recorded': None}, {'sentence_number': 134, 'sentence': 'The man ate the fresh peppers', 'keyword1': 'man', 'keyword2': 'ate', 'keyword3': 'fresh', 'keyword4': 'peppers', 'Recorded': None}, {'sentence_number': 135, 'sentence': 'The boss told a horrible joke', 'keyword1': 'boss', 'keyword2': 'told', 'keyword3': 'horrible', 'keyword4': 'joke', 'Recorded': None}, {'sentence_number': 136, 'sentence': 'The couple expected a new baby', 'keyword1': 'couple', 'keyword2': 'expected', 'keyword3': 'new', 'keyword4': 'baby', 'Recorded': None}, {'sentence_number': 137, 'sentence': 'The author wrote a long novel', 'keyword1': 'author', 'keyword2': 'wrote', 'keyword3': 'long', 'keyword4': 'novel', 'Recorded': None}, {'sentence_number': 138, 'sentence': 'The fans watched the football game', 'keyword1': 'fans', 'keyword2': 'watched', 'keyword3': 'football', 'keyword4': 'game', 'Recorded': None}, {'sentence_number': 140, 'sentence': 'The mother bought the birthday gift', 'keyword1': 'mother', 'keyword2': 'brought', 'keyword3': 'birthday', 'keyword4': 'gift', 'Recorded': None}, {'sentence_number': 141, 'sentence': 'The family cleaned the dirty house', 'keyword1': 'family', 'keyword2': 'cleaned', 'keyword3': 'dirty', 'keyword4': 'house', 'Recorded': None}, {'sentence_number': 142, 'sentence': 'The dog bit the youngest boy', 'keyword1': 'dog', 'keyword2': 'bit', 'keyword3': 'youngest', 'keyword4': 'boy', 'Recorded': None}, {'sentence_number': 143, 'sentence': 'The son loved the toy car', 'keyword1': 'son', 'keyword2': 'loved', 'keyword3': 'toy', 'keyword4': 'car', 'Recorded': None}, {'sentence_number': 144, 'sentence': 'The artist made a beautiful picture', 'keyword1': 'artist', 'keyword2': 'made', 'keyword3': 'beautiful', 'keyword4': 'picture', 'Recorded': None}, {'sentence_number': 145, 'sentence': 'The monkey wanted the yellow banana', 'keyword1': 'monkey', 'keyword2': 'wanted', 'keyword3': 'yellow', 'keyword4': 'banana', 'Recorded': None}, {'sentence_number': 146, 'sentence': 'The farmer grew the colorful peppers', 'keyword1': 'farmer', 'keyword2': 'grew', 'keyword3': 'colorful', 'keyword4': 'peppers', 'Recorded': None}, {'sentence_number': 147, 'sentence': 'The boss bought the new car', 'keyword1': 'boss', 'keyword2': 'bought', 'keyword3': 'new', 'keyword4': 'car', 'Recorded': None}, {'sentence_number': 148, 'sentence': 'The school needed a new teacher', 'keyword1': 'school', 'keyword2': 'needed', 'keyword3': 'new', 'keyword4': 'teacher', 'Recorded': None}, {'sentence_number': 149, 'sentence': 'The president gave an interesting speech', 'keyword1': 'president', 'keyword2': 'gave', 'keyword3': 'interesting', 'keyword4': 'speech', 'Recorded': None}, {'sentence_number': 150, 'sentence': 'The man heard the beautiful music', 'keyword1': 'man', 'keyword2': 'heard', 'keyword3': 'beautiful', 'keyword4': 'music', 'Recorded': None}, {'sentence_number': 151, 'sentence': 'The mouse found the yellow cheese', 'keyword1': 'mouse', 'keyword2': 'found', 'keyword3': 'yellow', 'keyword4': 'cheese', 'Recorded': None}, {'sentence_number': 152, 'sentence': 'The horse made the loud noise', 'keyword1': 'horse', 'keyword2': 'made', 'keyword3': 'loud', 'keyword4': 'noise', 'Recorded': None}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="Sentence_keyword_check.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="retakeLoop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="100" valType="num"/>
+      <Param name="name" updates="None" val="retakeLoop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="startInstructions"/>
+    <Routine name="trial"/>
+    <Routine name="interimMsg"/>
+    <LoopTerminator name="retakeLoop"/>
+    <LoopTerminator name="trials"/>
+  </Flow>
+</PsychoPy2experiment>

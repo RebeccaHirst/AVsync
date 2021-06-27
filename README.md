@@ -1,7 +1,7 @@
 Sync Mic recorded audio with video
 ===================================
 
-Automatically sync mic recorded audio with a video files. Useful for when you need to replace low quality audio of a video recording with a higher quality simultaneously recorded audio. This project generally follows [this guide](http://www.dsg-bielefeld.de/dsg_wp/wp-content/uploads/2014/10/video_syncing_fun.pdf). 
+Automatically sync mic recorded audio with a video files. Useful for when you need to replace low quality audio of a video recording with a higher quality simultaneously recorded audio. This project generally follows [this guide](http://www.dsg-bielefeld.de/dsg_wp/wp-content/uploads/2014/10/video_syncing_fun.pdf) but instead trims audio and video to an initial clap event, then replaces the video audio with the recorded mic audio file. 
 
 
 ## Step-by-step guide

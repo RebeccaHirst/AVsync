@@ -32,7 +32,7 @@ for i to n
   ; fileappend "'textfile$'" 'newline$'
   for j to numberOfFrames              ; Renamed your second i into j
     intensity = Get value in frame: j
-    if intensity > 40
+    if intensity > 45
       time = Get time from frame: j
       onsetresultline$ = "{'soundFile': ''soundname$'.wav', 'onset': 'tab$''time''tab$'}"
       fileappend "'textfile$'" 'onsetresultline$'

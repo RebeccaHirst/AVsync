@@ -9,19 +9,34 @@ Automatically sync mic recorded audio with a video files. Useful for when you ne
 
 Getting set up
 --------------
+
+All of the software used to generate stimuli are open-source and free: 
+
 1. Install [ffmpeg](https://ffmpeg.org/download.html), I found [this guide useful for windows](https://www.wikihow.com/Install-FFmpeg-on-Windows) although note that with the 2021 release of Praat you use slightly different code to execute Praat from the command line in windows (no need for praatcon.exe). 
 2. Install [Praat](https://www.fon.hum.uva.nl/praat/download_win.html) once you have downloaded and extracted the Praat.exe file add it to your Program Files directory.
+3. To automate the recording process we presented to-be-read sentences to the human speaker via [psychopy](https://psychopy.org/), this was not necissary but it meant we could present the clap event and cue to speak with systematic timing, if you want to use that part of the protocol you will need to download psychopy.
 
-Extracting video audio
+Recording stimuli
 -----------------------
-To allign our high quility audio recording with out video, we detect an onset event in the audio of the video and allign that with an audio event in our high quality recording. The first step is therefore to extract the audio of our videos and store them. This can be done by running **audio_from_vid.py**. 
+
+The files we used for recording stimuli can be found in "recording_materials":
+
+*	clap.wav - a wav file to generate the same clap on each recording
+*   recording_guide.psyexp - a psychopy experiment file to guide the timing of recordings, cues the researcher to start audio recoring then video recording then shows the sentence to be read. A countdown is presented in advance of th 200ms clap event, 1 second following onset of the clap the speaker is cued to "speak". There is then a period where the researcher can check the recordings and choose whether to re-record or move on to the next sentence. 
+*   Sentence_keyword_check.xlsx - a list of sentences to be spoken
+
+Note that these files are intended only to guide timing, video and audio were (by us) recorded independantly of psychopy. Audio was recorded via [audacity](https://www.audacityteam.org/) and video was recorded using a phone (A Huawei P30 lite). 
+
+Processing stimuli
+-------------------
+To allign our high quility audio recording with our video, we detect an onset event in the audio of the video and allign that with an audio event in our high quality recording. First, extract the audio from videos using **audio_from_vid.py**, make sure you have a subfolder called "audio_only" where the wav files will be stored. 
 
 
 Extracting audio onset times
 -----------------------
-The next step is to extract the audio-onset times for our video audio and mic recordings. For this we use Praat.
+The next step is to extract the audio-onset times for both the video audio and mic recordings. For this we use [Praat](https://praat.en.softonic.com/).
 
-1. Launch the Praat app either from program files [or from command line (https://www.fon.hum.uva.nl/praat/manual/Scripting_6_9__Calling_from_the_command_line.html) 
+1. Launch the Praat app either from program files [or from command line](https://www.fon.hum.uva.nl/praat/manual/Scripting_6_9__Calling_from_the_command_line.html) 
 
 ```
 > "C:\Program Files\Praat.exe"
@@ -39,7 +54,7 @@ The next step is to extract the audio-onset times for our video audio and mic re
 
 <img src="/screenshots/Praat_info_gui.png" width="50%"/>
 
-This will have written a list of dictionaries that we can read in python. You will want to run this script twice, once fir video audio and once for mic recorded audio - producing 2 .txt files (i.e. "video_onsets.txt" and "mic_onsets.txt")
+This will have written a list of dictionaries that we can read in python. You will want to run this script twice, once for video audio and once for mic recorded audio - producing 2 .txt files (i.e. "video_onsets.txt" and "mic_onsets.txt")
 
 Trim audio and video files to start at sound onset
 -----------------------
@@ -47,7 +62,7 @@ Once we know the onset of the sound event in each file, we can trim the audio an
 
 Replace video audio with high quality recording
 -----------------------
-This is actually also completed in **trim_files.py**:
+This is also completed in **trim_files.py**:
 
 ```
 video_files = glob('videos\\trimmed\\*mp4')
@@ -61,16 +76,7 @@ for i, video in enumerate(video_files):
     print(command)
     os.system(command)
 ```
-The corresponding final files are stored to `videos\\audio_replaced`
+The corresponding final files are stored to `videos\\audio_replaced` and there you have it! video recordings with high quality mic audio!
 
-Recording materials
------------------------
 
-*	clap.wav - a wav file to generate the same clap on each recording
-*   recording_guide.psyexp - a psychopy experiment file to guide the timing of recordings. 
-*   Sentence_keyword_check.xlsx - a list of sentences to be spoken
 
-Note that these files are intended only to guide timing, video and audio were (by us) recorded independantly of psychopy. Audio was recorded via audacity and video was recorded using a phone. 
-
-References:
----------------
